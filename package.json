@@ -1,11 +1,7 @@
-{
-  "name": "jv",
-   "version": "0.1.0",
-   "private": true,
-"homepage": "https://clydspyd.github.io/books/",
-  "name": "cotd",
-  "version": "0.0.3",
+{"name": "jv",
+  "version": "0.1.0",
   "private": true,
+  "homepage": "https://clydspyd.github.io/books/",
   "devDependencies": {
     "concurrently": "4.1.0",
     "react-scripts": "^2.1.1"
@@ -25,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "yarn run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "dev": "react-scripts start",
     "start": "react-scripts start",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
