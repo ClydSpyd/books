@@ -1,9 +1,9 @@
 import React from 'react';
 import TopBar from './TopBar';
 import Grid from './Grid';
-import bookSamples from './bookSamples'
+// import bookSamples from './bookSamples'
 import AddBookForm from './AddBookForm'
-import  samples2 from './samples2'
+import  samples from './samplesTwo'
 
 
 class App extends React.Component{
@@ -62,7 +62,7 @@ class App extends React.Component{
 
   componentDidMount(){
     
-    const initialState = JSON.parse(localStorage.getItem('books')) ? JSON.parse(localStorage.getItem('books')) : bookSamples;
+    const initialState = JSON.parse(localStorage.getItem('books')) ? JSON.parse(localStorage.getItem('books')) : samples;
     
     // const initialState = JSON.parse(localStorage.getItem('books'))
     this.setState({books: initialState})

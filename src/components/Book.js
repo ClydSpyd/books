@@ -80,7 +80,7 @@ class Book extends React.Component{
             : null}
 
         {this.state.isRead && this.state.deleting===false ?
-          <i class="fas fa-check-circle bookIsRead"></i>
+          <i className="fas fa-check-circle bookIsRead"></i>
           : null}
 
         

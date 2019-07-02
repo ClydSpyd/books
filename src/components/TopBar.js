@@ -4,7 +4,7 @@ class TopBar extends React.Component{
 render(){
   return (
     <div className="topWrapper">
-      <div className='title'><i class="fas fa-book"></i><span>iShelf</span></div>
+      <div className='title'><i className="fas fa-book"></i><span>iShelf</span></div>
       <div className='mainBar'>
         {/* <Search />
         <Filter /> */}
