@@ -13,7 +13,7 @@ body{
 }
 .title{
   font-size: 1.5rem;
-  padding:10px;
+  padding:7px;
   border-top: solid 1px blueviolet;
   border-bottom: solid 1px blueviolet;
   width:40%;
@@ -59,12 +59,12 @@ body{
   /* position: relative; */
   margin:2px;
   display: flex;
-  /* flex-grow: 1; */
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width:150px;
-  height:230px;
+  height:240px;
   /* border-right:.5px solid blue; */
   background-color: rgba(32, 32, 255, 0.041);
 }
@@ -87,18 +87,24 @@ body{
   width:125px;
   object-fit: cover;
 }
+.red {
+  background-color: rgba(220, 20, 60, 0.609);
+}
+.cyan {
+  background-color: rgba(0, 195, 255, 0.904)
+}
 .bookDetailsText{
   padding: 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  background-color: rgba(0, 195, 255, 0.904);
+  /* background-color: rgba(0, 195, 255, 0.904); */
   position: absolute;
   height:196px;
-  width:125px;
-  top: -196px;
-  right: -5px;
+  width:127px;
+  top: -197px;
+  right: -65px;
   /* bottom:190px; */
 }
 /* .bookDetailsText{
@@ -113,6 +119,9 @@ body{
 }
 
 .bookDetailsButton {
+  position: absolute;
+  right:-63px;
+  bottom:-17px;
   margin:5px 0 5px 0;
   display: flex;
   align-items: center;
@@ -120,7 +129,12 @@ body{
   border-top: 1px cyan solid;
   border-bottom: 1px cyan solid;
   margin-top: 6px;
+  width:125px;
   /* border:cyan 1px solid; */
+}
+.spacer{
+  position: relative;
+  height: 10px;
 }
 .bookDetailsButton button {
   cursor: pointer;
@@ -137,6 +151,29 @@ body{
   text-decoration: underline;
 }
 
+.bookIsRead{
+  font-size: 1.3rem;
+  color: blueviolet;
+  background-color: white;
+  border-radius: 50px;
+  /* border: blueviolet px solid; */
+  position: absolute;
+  z-index: 1;
+  left:37px;
+  bottom:12px;
+}
+.deleteDiv{
+  cursor: pointer;
+}
+.bookDelete {
+  font-size: 2.5rem;
+}
+.bookDeleteText{
+  margin:5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+
+}
 
 /* ADD BOOK FORM */
 
@@ -159,4 +196,58 @@ body{
   font-size: .6rem;
   margin:0px;
   font-family: 'Roboto', sans-serif;
+}
+
+
+/* // BOOK DEETZ // */
+.visible{
+  /* margin:auto 0; */
+  width:100%;
+  height:100%;
+  display: block;
+  z-index: 5;
+  position: absolute;
+}
+
+.bookDeetzWrapper{
+  position: absolute;
+  left: 46%;
+  top: 35%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(137, 43, 226, 0.945);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50vh;
+}
+.editForm{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editForm input {
+  text-align: center;
+  height:20px;
+  margin:3px 0;
+}
+
+.editForm button {
+  width:120px;
+  margin: 15px auto 3px auto;
+}
+
+#bookDeetz{
+  margin: 0 auto;
+}
+
+.formCancel{
+  cursor: pointer;
+  font-size: .8rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: azure;
+  font-weight: 100;
 }

@@ -1,4 +1,8 @@
 {
+  "name": "jv",
+   "version": "0.1.0",
+   "private": true,
+"homepage": "https://clydspyd.github.io/books/",
   "name": "cotd",
   "version": "0.0.3",
   "private": true,
@@ -9,6 +13,7 @@
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
     "firebase": "^5.7.0",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.0",
     "re-base": "4.0.0",
     "react": "^16.6.3",
@@ -19,6 +24,8 @@
     "stylus": "0.54.5"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+   "deploy": "gh-pages -d build",
     "dev": "react-scripts start",
     "start": "react-scripts start",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",

@@ -11,6 +11,8 @@ class App extends React.Component{
     super(props);
     this.handleFilter = this.handleFilter.bind(this);
     this.handleDestroy = this.handleDestroy.bind(this)
+    this.handleReadChange = this.handleReadChange.bind(this)
+    this.handleUpdate = this.handleUpdate.bind(this)
   }
   state = {
     books: {},
@@ -40,6 +42,20 @@ class App extends React.Component{
     console.log('destroy')
   }
 
+  handleReadChange(index){
+    const book = this.state.books[index];
+    // book.setState({read: true})
+    book.read ? book.read = false : book.read = true;
+    const books = {...this.state.books};
+    localStorage.setItem('books',JSON.stringify(books))
+    console.log(book)
+  }
+  handleUpdate () {
+    const books = {...this.state.books};
+    this.setState({books})
+    localStorage.setItem('books',JSON.stringify(books))
+  }
+
   handleFilter(input){
     this.setState(input)
   }
@@ -57,7 +73,7 @@ class App extends React.Component{
       <React.Fragment>
       <TopBar />
       <div className="lowerWrappr">
-        <Grid handleDestroy={this.handleDestroy} loadSamples={this.loadSamples} books={this.state.books}/>
+        <Grid handleReadChange={this.handleReadChange} handleDestroy={this.handleDestroy} loadSamples={this.loadSamples} books={this.state.books} handleUpdate={this.handleUpdate}/>
         <AddBookForm addBook={this.addBook}/>
       </div>
       </React.Fragment>

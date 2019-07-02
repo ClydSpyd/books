@@ -24,6 +24,7 @@ class AddBookForm extends React.Component{
       name : this.nameRef.current.value,
       author : this.authorRef.current.value,
       urlToImg : cover,
+      read : false,
       index: `book${Date.now()}`
     }
     this.props.addBook(book);
