@@ -1,9 +1,9 @@
 import React from 'react';
 import TopBar from './TopBar';
 import Grid from './Grid';
-// import bookSamples from './bookSamples'
+import bookSamples from './bookSamples'
 import AddBookForm from './AddBookForm'
-import  samples from './samplesTwo'
+import  samples2 from './samples2'
 
 
 class App extends React.Component{
@@ -13,10 +13,12 @@ class App extends React.Component{
     this.handleDestroy = this.handleDestroy.bind(this)
     this.handleReadChange = this.handleReadChange.bind(this)
     this.handleUpdate = this.handleUpdate.bind(this)
+    this.handleFilterCheck = this.handleFilterCheck.bind(this)
   }
   state = {
     books: {},
     filterText: '',
+    filterCheck: 'all',
   }
 
   addBook = (book) => {
@@ -57,12 +59,16 @@ class App extends React.Component{
   }
 
   handleFilter(input){
-    this.setState(input)
+    this.setState({filterText: input})
+  }
+
+  handleFilterCheck(input){
+    this.setState({filterCheck: input})
   }
 
   componentDidMount(){
     
-    const initialState = JSON.parse(localStorage.getItem('books')) ? JSON.parse(localStorage.getItem('books')) : samples;
+    const initialState = JSON.parse(localStorage.getItem('books')) ? JSON.parse(localStorage.getItem('books')) : bookSamples;
     
     // const initialState = JSON.parse(localStorage.getItem('books'))
     this.setState({books: initialState})
@@ -71,9 +77,20 @@ class App extends React.Component{
   render(){
     return (
       <React.Fragment>
-      <TopBar />
+
+      <TopBar handleFilterCheck={this.handleFilterCheck} handleFilter={this.handleFilter}/>
+
       <div className="lowerWrappr">
-        <Grid handleReadChange={this.handleReadChange} handleDestroy={this.handleDestroy} loadSamples={this.loadSamples} books={this.state.books} handleUpdate={this.handleUpdate}/>
+        <Grid 
+          handleReadChange={this.handleReadChange} 
+          handleDestroy={this.handleDestroy} 
+          loadSamples={this.loadSamples} 
+          books={this.state.books} 
+          handleUpdate={this.handleUpdate}
+          filterCheck={this.state.filterCheck}
+          filterText = {this.state.filterText}
+        />
+        
         <AddBookForm addBook={this.addBook}/>
       </div>
       </React.Fragment>

@@ -79,8 +79,9 @@ class Book extends React.Component{
             </React.Fragment>
             : null}
 
-        {this.state.isRead && this.state.deleting===false ?
-          <i className="fas fa-check-circle bookIsRead"></i>
+        {this.props.details.read && this.state.deleting===false ?
+        // {this.props.details.read && this.state.deleting===false && this.props.filterCheck === 'all' ?
+          <i class="fas fa-check-circle bookIsRead"></i>
           : null}
 
         

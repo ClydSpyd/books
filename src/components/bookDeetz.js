@@ -36,7 +36,7 @@ class BookDeetz extends React.Component{
       	<form className = 'editForm' onSubmit={this.createBook}>
       	  <input defaultValue={this.props.deetz.name} ref={this.nameRefB} type="text"/>
       	  <input defaultValue={this.props.deetz.author} ref={this.authorRefB}type="text"/>
-      	  <input defaultValue='enter new image URL' ref={this.linkToImgRefB} type="text"/>
+      	  <input placeholder='enter new image URL' ref={this.linkToImgRefB} type="text"/>
       	  <button onClick={this.handleSubmit} >update</button>
           <p className='formCancel' onClick={this.props.cancelForm}>cancel</p>
       	</form>

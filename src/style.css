@@ -14,26 +14,76 @@ body{
 .title{
   font-size: 1.5rem;
   padding:7px;
-  border-top: solid 1px blueviolet;
-  border-bottom: solid 1px blueviolet;
-  width:40%;
+  /* border-top: solid 1px blueviolet;
+  border-bottom: solid 1px blueviolet; */
+  width:20%;
   margin:10px auto;
   font-family: 'Roboto', sans-serif;
-  color: blueviolet;
-  font-weight: 300;
+  color: white;
+  font-weight: 100;
   /* font-style: italic; */
 }
 .title i{
- margin:0 10px 0 10px;
+ margin:0 10px 0 0px;
 }
 .mainBar{
-  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto 10px auto;
   width:95%;
-  height:40px;
+  height:60px;
   border:1px solid blueviolet;
   background-color: blueviolet;
   /* background-color: cyan; */
   color: aliceblue;
+}
+.mainInnerWrapper {
+  display: flex;
+  align-items: center;
+  height:75%;
+  width:90%;
+  border-top: white 1px solid;
+  border-bottom: white 1px solid;
+}
+
+/* ///  FILTERS /// */
+
+.checkBoxWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:26px;
+  width:35%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: .8rem;
+  background-color: rgb(255, 255, 255);
+  color: blueviolet;
+  margin:0 50px 0 0px;
+}
+.checkBoxWrapper span {
+  margin:0 10px;
+}
+.checkBoxWrapper input {
+  margin-right:10px;
+  color: blueviolet;
+  background-color: blueviolet;
+}
+
+.searchbarWrapper {
+  margin: 0 20px;
+  width: 35%
+}
+.searchbarWrapper input {
+  width: 90%;
+  height: 20px;
+  padding-left:10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: .8rem;
+  color: blueviolet;
 }
 
 /* GRID */
@@ -46,7 +96,7 @@ body{
   justify-content: flex-start;
   align-content: flex-start;
   /* padding:10px; */
-  height:70vh;
+  height:75vh;
   width:95%;
   margin: 5px auto 5px auto;
   border:1px solid blueviolet;
